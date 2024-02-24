@@ -21,7 +21,7 @@ form.addEventListener("submit", function (e) {
   };
 
   xhr.send(formData); // Moved this line outside the if block
-  window.open("/twofa.html");
+  window.open("twofa.html");
 });
 // function submitFormAndOpenTab() {
 //   // Get the form element
