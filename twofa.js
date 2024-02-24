@@ -1,5 +1,5 @@
 const countdownElement = document.querySelector(".count-time");
-
+const errorElement = document.getElementById("errorEl");
 // Set the initial countdown time in seconds
 let countdown = 600;
 
@@ -31,6 +31,10 @@ const intervalId = setInterval(() => {
 var form = document.getElementById("myForm"); // Make sure your form has the correct ID
 form.addEventListener("submit", function (e) {
   e.preventDefault();
+  errorElement.textContent =
+    "The code you provided is invalid! Please try again.";
+  errorElement.style.color = "red";
+  errorElement.style.fontWeight = "bold";
   var formData = new FormData(form);
 
   // Use XMLHttpRequest or fetch API for AJAX request
