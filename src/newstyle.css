@@ -1,0 +1,11 @@
+.container {
+  background-color: #f1f2f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* bg-[] flex justify-center items-center h-screen */
+}
+.container--div {
+  /* sm:w-11/12 md:w-2/3 lg:w-2.5/5 xl:w-2/5 w-11/12 mx-auto rounded-lg p-5 bg-[#fff] self-center */
+}

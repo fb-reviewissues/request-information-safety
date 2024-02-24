@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f1f2f6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 500px;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+      }
+
+      img {
+        width: 70%;
+        margin: 20px auto;
+      }
+
+      .message-heading {
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+
+      .message-body {
+        margin: 10px 0;
+        line-height: 1.5;
+      }
+
+      .notification-box {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background-color: #f7f8fa;
+        border-radius: 5px;
+        margin: 10px 0;
+      }
+
+      .warning-icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+      }
+
+      .notification-text {
+        flex: 1;
+      }
+
+      .cta-button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #3498db;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+
+      @media screen and (min-width: 576px) {
+        .container {
+          width: 70%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <img src="./src/f_locked.png" alt="Banner" />
+      <p class="message-heading">The security of your account is at risk.</p>
+      <p class="message-body">
+        We have temporarily blocked your account because your Facebook Protect
+        settings have been modified.
+      </p>
+      <div class="notification-box">
+        <div class="warning-icon">
+          <img src="./src/sign.png" alt="Warn" />
+        </div>
+        <div class="notification-text">
+          <p class="font-semibold">
+            Your page was restricted on January 2, 2024.
+          </p>
+          <p>We did this to protect your account from being suspended.</p>
+        </div>
+      </div>
+      <p class="message-body">
+        We will guide you through some steps to lift the page restriction and
+        unlock your account.
+      </p>
+      <a href="./next.html" class="cta-button">Continue</a>
+    </div>
+  </body>
+</html>
